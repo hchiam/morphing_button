@@ -2,6 +2,8 @@
 
 [Live demo](https://codepen.io/hchiam/pen/BaQNXom)
 
+<img src="demo.gif">
+
 ```js
 https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
