@@ -1,4 +1,4 @@
-# `morphing_button` [![version](https://img.shields.io/github/release/hchiam/morphing_button?style=flat-square)](https://github.com/hchiam/morphing_button/releases)
+# `morphing_button` [![version](https://img.shields.io/github/release/hchiam/morphing_button)](https://github.com/hchiam/morphing_button/releases)
 
 [Live demo](https://codepen.io/hchiam/pen/BaQNXom)
 
