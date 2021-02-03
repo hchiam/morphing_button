@@ -2,7 +2,7 @@
 
 [Live demo](https://codepen.io/hchiam/pen/BaQNXom)
 
-<img src="demo.gif" height="300">
+[<img src="demo.gif" height="300">](https://codepen.io/hchiam/pen/BaQNXom)
 
 ```js
 https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
