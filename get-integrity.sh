@@ -5,7 +5,7 @@ function sha() {
 
 # uncomment the following lines:
 
-# echo
-# echo someFileName.js
-# sha someFileName.js
-# echo
+echo
+echo morphing_button.js
+sha morphing_button.js
+echo

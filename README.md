@@ -1,38 +1,24 @@
-# Template for convenience script repos [![version](https://img.shields.io/github/release/hchiam/convenience?style=flat-square)](https://github.com/hchiam/convenience/releases)
+# `morphing_button` [![version](https://img.shields.io/github/release/hchiam/morphing_button?style=flat-square)](https://github.com/hchiam/morphing_button/releases)
 
-# **NOTE: EVERYTHING ABOVE THIS LINE IS MEANT TO BE EDITED**
-
-With [`gh`](https://github.com/hchiam/learning-gh), you can quickly use this repo from CLI: `gh repo clone hchiam/convenience && cd convenience`. Everything else in this README.md is boilerplate. Delete this note section when ready. Consider whether you need to set code [linting](https://github.com/hchiam/learning-eslint-google). Consider whether you need to set up [Travis CI](https://github.com/hchiam/learning-travis) for automated testing of things like PRs. If you want to create a website fast, use a code generator instead, like [`create-next-app`](https://github.com/hchiam/learning-nextjs), [`sapper`](https://github.com/hchiam/learning-sapper), or [`yo`](https://yeoman.io/generators).
-
-# **NOTE: EVERYTHING BELOW THIS LINE IS MEANT TO BE EDITED**
-
-[Live demo](https://codepen.io/hchiam/pen/...)
+[Live demo](https://codepen.io/hchiam/pen/BaQNXom)
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/convenience@main/someFileName.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/convenience@1.0.0/someFileName.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.0.0/morphing_button.js
 ```
 
-Example usage:
-
-```js
-...
-```
-
-CDN usage:
+Example usage: (just include it)
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/convenience@1.0.0/someFileName.js"
-  integrity="sha384-L0ng4lphAnum3r1C57r1N9"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.0.0/morphing_button.js"
+  integrity="sha384-7h0pUoPG+2emSlZlRfDJ/qnD6xj6whgjk/N/8mC4EzUV3fJUnNHdjBGlea1gXRLV"
   crossorigin="anonymous"
 ></script>
 ```
-
-<!-- uncomment the part with someFileName.js in get-integrity.sh and edit the file name as needed: -->
 
 ```bash
 # get the thing to put into integrity="...":
