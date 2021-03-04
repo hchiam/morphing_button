@@ -1,48 +1,83 @@
-function updateMorphingButtons() {
-  // able to run more than once
-
-  const morphing_buttons = Array.from(
-    document.querySelectorAll(".morphing_button")
-  );
-
-  const children = morphing_buttons.map((b) =>
-    b.getElementsByClassName("hidden")
-  );
-
-  const morph = (button) => {
-    morphing_buttons.map((b) => {
-      if (b !== button) return;
-      b.classList.add("morphing");
-      b.classList.remove("reverting");
+var Morphing_button = (function () {
+  function setup(button) {
+    button.addEventListener("animationend", function () {
+      if (button && button.classList) button.classList.remove("reverting");
     });
-    children.map((c) => c.classList.remove("hidden"));
-  };
+  }
 
-  const revert = (button) => {
+  function morph(button) {
+    const boundingClient = button.getBoundingClientRect();
+    button.style.left = boundingClient.left + "px";
+    button.style.top = boundingClient.top + "px";
+    button.classList.add("morphing");
+    button.classList.remove("reverting");
+    button.isExpanding = true;
+    button.previousContent = button.innerHTML;
+    button.disabled = true;
+    var children = button.getElementsByClassName("hidden");
+    if (children.length) {
+      children.map((c) => {
+        if (c && c.classList) c.classList.remove("hidden");
+      });
+    }
+  }
+
+  function revert(button, e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    button.classList.remove("morphing");
+    button.classList.add("reverting");
+    button.isExpanding = false;
+    button.disabled = false;
+    if (button.previousContent) {
+      button.innerHTML = button.previousContent;
+      button.previousContent = null;
+    }
+    var children = button.getElementsByClassName("hidden");
+    if (children.length) {
+      children.map((c) => {
+        if (c && c.classList) c.classList.add("hidden");
+      });
+    }
+  }
+
+  function _setUpBasicMorphingButtons() {
+    const morphing_buttons = Array.from(
+      document.querySelectorAll(".morphing_button")
+    );
+
+    const _morph = (button) => {
+      morphing_buttons.map((b) => {
+        if (!b || b !== button) return;
+        morph(b);
+      });
+    };
+
+    const _revert = (button) => {
+      morphing_buttons.map((b) => {
+        if (!b || b !== button) return;
+        revert(b);
+      });
+    };
+
     morphing_buttons.map((b) => {
-      if (b !== button) return;
-      b.classList.remove("morphing");
-      b.classList.add("reverting");
+      b.addEventListener("click", function (e) {
+        // if (this !== e.target) return;
+        if (!b) return;
+        b.isExpanding = !b.isExpanding;
+        b.previousContent = b.innerHTML;
+        if (b.isExpanding) {
+          _morph(this);
+        } else {
+          _revert(this);
+        }
+      });
+      b.addEventListener("animationend", function () {
+        if (b && b.classList) b.classList.remove("reverting");
+      });
     });
-    children.map((c) => c.classList.add("hidden"));
-  };
+  }
 
-  morphing_buttons.map((b) =>
-    b.addEventListener("click", function (e) {
-      if (this !== e.target) return;
-      b.isExpanding = !b.isExpanding;
-      if (b.isExpanding) {
-        morph(this);
-      } else {
-        revert(this);
-      }
-    })
-  );
-}
-
-// run once:
-(function () {
-  updateMorphingButtons();
+  _setUpBasicMorphingButtons();
 
   // const x = document.querySelector("button .x");
   // x.addEventListener("click", revert);
@@ -53,14 +88,7 @@ function updateMorphingButtons() {
 
   var styles = `
     .morphing_button {
-      width: 10ch;
-      height: 5ch;
       transition: 0.2s;
-      overflow: hidden;
-    }
-    
-    .fill-screen {
-      width: 12ch;
     }
     
     .morphing {
@@ -68,10 +96,14 @@ function updateMorphingButtons() {
       margin: 0;
       outline: none;
       border: none;
+      overflow: hidden;
+      width: 5ch;
+      height: 5ch;
     }
     
     .morphing.fill-screen {
-      position: absolute;
+      animation: move_to_center 0.3s forwards, morph_to_fill_screen 0.7s 0.3s forwards;
+      position: fixed;
       z-index: 9001;
     }
     
@@ -88,6 +120,17 @@ function updateMorphingButtons() {
     
     .morphing * {
       animation: show_children_after_morph 1s forwards;
+    }
+
+    @keyframes move_to_center {
+      0% {
+        position: fixed;
+      }
+      100% {
+        position: fixed;
+        top: calc(50vh - 2.5ch);
+        left: calc(50vw - 2.5ch);
+      }
     }
     
     @keyframes morph {
@@ -108,6 +151,32 @@ function updateMorphingButtons() {
         clip-path: circle(75%);
         width: 100vw;
         height: 100vh;
+      }
+    }
+    
+    @keyframes morph_to_fill_screen {
+      0% {
+        color: transparent;
+        clip-path: circle(75%);
+      }
+      50% {
+        clip-path: circle(25%);
+        width: 7ch;
+        height: 7ch;
+        top: calc(50vh - 3.5ch);
+        left: calc(50vw - 3.5ch);
+      }
+      90% {
+        /* defer showing text: */
+        color: transparent;
+        position: fixed;
+      }
+      100% {
+        clip-path: circle(75%);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
       }
     }
     
@@ -136,10 +205,20 @@ function updateMorphingButtons() {
         width: 100vw;
         height: 100vh;
         color: transparent;
+        top: 0;
+        left: 0;
       }
-      90% {
+      10% {
         /* defer showing text: */
         color: transparent;
+        position: fixed;
+      }
+      50% {
+        clip-path: circle(25%);
+        width: 7ch;
+        height: 7ch;
+        top: calc(50vh - 3.5ch);
+        left: calc(50vw - 3.5ch);
       }
     }
     
@@ -151,7 +230,13 @@ function updateMorphingButtons() {
 
   var styleSheet = document.createElement("style");
   styleSheet.type = "text/css";
-  styleSheet.className = "flying-focus-ring-style-sheet";
-  styleSheet.innerText = styles;
+  styleSheet.className = "morphing_button-style-sheet";
+  styleSheet.innerHTML = styles;
   document.head.appendChild(styleSheet);
+
+  return {
+    setup,
+    morph,
+    revert,
+  };
 })();
