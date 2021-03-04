@@ -25,8 +25,9 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js
 ></script>
 ```
 
-### Or for more fine-grained control, omit `.morphing_button`:
+### Or for more fine-grained control, omit `class="morphing_button"`:
 
+And use these JS methods:
 - `Morphing_button.setup(button)`
 - `Morphing_button.morph(button)`
 - `Morphing_button.revert(button)`
