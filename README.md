@@ -20,7 +20,7 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js
 <button id="test" class="morphing_button fill-screen">test</button>
 <script
   src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js"
-  integrity="sha384-4k/kXfx1xGoYDvvWWRlSepBJbkbLbSCpXugIbxGNEP4S7SUmIiDO6ZkAsBFNmrO0"
+  integrity="sha384-8KxKsoiL1qGLyP/NoWrQjjdXp3VO98CGGDpLYgNzaAKswhhUDrad981WsRkYluRA"
   crossorigin="anonymous"
 ></script>
 ```
