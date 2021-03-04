@@ -45,20 +45,6 @@ var Morphing_button = (function () {
       document.querySelectorAll(".morphing_button")
     );
 
-    const _morph = (button) => {
-      morphing_buttons.map((b) => {
-        if (!b || b !== button) return;
-        morph(b);
-      });
-    };
-
-    const _revert = (button) => {
-      morphing_buttons.map((b) => {
-        if (!b || b !== button) return;
-        revert(b);
-      });
-    };
-
     morphing_buttons.map((b) => {
       b.addEventListener("click", function (e) {
         // if (this !== e.target) return;
@@ -66,9 +52,10 @@ var Morphing_button = (function () {
         b.isExpanding = !b.isExpanding;
         b.previousContent = b.innerHTML;
         if (b.isExpanding) {
-          _morph(this);
+          morph(this);
+          b.disabled = false;
         } else {
-          _revert(this);
+          revert(this);
         }
       });
       b.addEventListener("animationend", function () {

@@ -9,7 +9,7 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js
 ```
 
 ## Example usage:
@@ -19,8 +19,8 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js
 ```html
 <button id="test" class="morphing_button fill-screen">test</button>
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js"
-  integrity="sha384-8KxKsoiL1qGLyP/NoWrQjjdXp3VO98CGGDpLYgNzaAKswhhUDrad981WsRkYluRA"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js"
+  integrity="sha384-zbYqqktW1yMuzUZemVAx7bSWgpApii0ZepaMXppUUcJ82by/tyDD3+tknQVJdON3"
   crossorigin="anonymous"
 ></script>
 ```
@@ -35,8 +35,8 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js
 <!-- without the .morphing_button class: -->
 <button id="test" class="fill-screen">test</button>
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js"
-  integrity="sha384-8KxKsoiL1qGLyP/NoWrQjjdXp3VO98CGGDpLYgNzaAKswhhUDrad981WsRkYluRA"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js"
+  integrity="sha384-zbYqqktW1yMuzUZemVAx7bSWgpApii0ZepaMXppUUcJ82by/tyDD3+tknQVJdON3"
   crossorigin="anonymous"
 ></script>
 <script>

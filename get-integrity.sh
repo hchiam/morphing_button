@@ -9,3 +9,5 @@ echo
 echo morphing_button.js
 sha morphing_button.js
 echo
+echo update all examples
+echo
