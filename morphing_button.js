@@ -1,4 +1,6 @@
-(function () {
+function updateMorphingButtons() {
+  // able to run more than once
+
   const morphing_buttons = Array.from(
     document.querySelectorAll(".morphing_button")
   );
@@ -36,6 +38,11 @@
       }
     })
   );
+}
+
+// run once:
+(function () {
+  updateMorphingButtons();
 
   // const x = document.querySelector("button .x");
   // x.addEventListener("click", revert);

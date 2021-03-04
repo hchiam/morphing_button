@@ -9,15 +9,15 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.0.0/morphing_button.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.1.0/morphing_button.js
 ```
 
 Example usage: (just include it)
 
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.0.0/morphing_button.js"
-  integrity="sha384-7h0pUoPG+2emSlZlRfDJ/qnD6xj6whgjk/N/8mC4EzUV3fJUnNHdjBGlea1gXRLV"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.1.0/morphing_button.js"
+  integrity="sha384-4k/kXfx1xGoYDvvWWRlSepBJbkbLbSCpXugIbxGNEP4S7SUmIiDO6ZkAsBFNmrO0"
   crossorigin="anonymous"
 ></script>
 ```
