@@ -9,7 +9,7 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.2/morphing_button.js
 ```
 
 ## Example usage:
@@ -19,8 +19,8 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js
 ```html
 <button id="test" class="morphing_button fill-screen">test</button>
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js"
-  integrity="sha384-zbYqqktW1yMuzUZemVAx7bSWgpApii0ZepaMXppUUcJ82by/tyDD3+tknQVJdON3"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.2/morphing_button.js"
+  integrity="sha384-HvfbDMgWD3bUGxVpKBm0ULZUv+M7KeUNJc8aSBHgRssKWSyPytopkC7EdsRlAXC9"
   crossorigin="anonymous"
 ></script>
 ```
@@ -28,6 +28,7 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js
 ### Or for more fine-grained control, omit `class="morphing_button"`:
 
 And use these JS methods:
+
 - `Morphing_button.setup(button)`
 - `Morphing_button.morph(button)`
 - `Morphing_button.revert(button)`
@@ -36,8 +37,8 @@ And use these JS methods:
 <!-- without the .morphing_button class: -->
 <button id="test" class="fill-screen">test</button>
 <script
-  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.1/morphing_button.js"
-  integrity="sha384-zbYqqktW1yMuzUZemVAx7bSWgpApii0ZepaMXppUUcJ82by/tyDD3+tknQVJdON3"
+  src="https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.2/morphing_button.js"
+  integrity="sha384-HvfbDMgWD3bUGxVpKBm0ULZUv+M7KeUNJc8aSBHgRssKWSyPytopkC7EdsRlAXC9"
   crossorigin="anonymous"
 ></script>
 <script>
