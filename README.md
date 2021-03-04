@@ -9,7 +9,7 @@ https://cdn.jsdelivr.net/gh/hchiam/morphing_button@main/morphing_button.js
 ```
 
 ```js
-https://cdn.jsdelivr.net/gh/hchiam/morphing_button@1.1.0/morphing_button.js
+https://cdn.jsdelivr.net/gh/hchiam/morphing_button@2.0.0/morphing_button.js
 ```
 
 ## Example usage:
